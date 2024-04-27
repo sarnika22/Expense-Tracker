@@ -49,7 +49,36 @@ export default function Summary() {
               <Text color={"gray.500"}>Total Income</Text>
             </Flex>
           </Flex>
+          <Flex
+            justifyContent={"space-evenly"}
+            alignItems={"center"}
+            bg={"gray.50"}
+            w={"full"}
+            h={"100px"}
+            border={"1px solid"}
+            borderColor={"gary.100"}
+          >
+            <Flex flexDirection={"column"}>
+              <Heading color={"gray.700"}>$ 100</Heading>
+              <Text color={"gray.500"}>Total Expense</Text>
+            </Flex>
+          </Flex>
         </Flex>
+        <Box
+          flex={1}
+          mt={"10"}
+          ml={"-90px"}
+          mr={"5"}
+          width={"300px"}
+          height={"300px"}
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"center"}
+        >
+            <Heading>
+                Chart
+            </Heading>
+        </Box>
       </Flex>
     </Box>
   );
