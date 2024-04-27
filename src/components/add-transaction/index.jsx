@@ -13,7 +13,7 @@ import {
   Radio,
   RadioGroup,
 } from "@chakra-ui/react";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { GlobalContext } from "../context";
 
 export default function TransactionForm({ onClose, isOpen }) {
@@ -44,7 +44,7 @@ export default function TransactionForm({ onClose, isOpen }) {
               <FormLabel>Enter Description</FormLabel>
               <Input
                 placeholder="Enter transaction description"
-                name="Description"
+                name="description"
                 type="text"
                 onChange={handleFormChange}
               />
@@ -53,7 +53,7 @@ export default function TransactionForm({ onClose, isOpen }) {
               <FormLabel>Enter Amount</FormLabel>
               <Input
                 placeholder="Enter transaction amount"
-                name="Amount"
+                name="amount"
                 type="number"
                 onChange={handleFormChange}
               />
@@ -64,6 +64,7 @@ export default function TransactionForm({ onClose, isOpen }) {
                 value="income"
                 colorScheme="blue"
                 name="Type"
+                onChange={handleFormChange}
               >
                 Income
               </Radio>
@@ -72,6 +73,7 @@ export default function TransactionForm({ onClose, isOpen }) {
                 value="expense"
                 colorScheme="red"
                 name="Type"
+                onChange={handleFormChange}
               >
                 Expense
               </Radio>
