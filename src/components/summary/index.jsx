@@ -1,9 +1,11 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import TransactionForm from "../add-transaction";
+import TransactionChartSummary from "../chart";
 
-export default function Summary() {
+export default function Summary({ onClose, isOpen }) {
   return (
     <Box
-      p={"6"}
+      p="6"
       border={"1px solid"}
       borderColor={"gray.100"}
       overflow={"hidden"}
@@ -12,7 +14,7 @@ export default function Summary() {
       display={"flex"}
     >
       <Flex
-        w={"full"}
+        w="full"
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={{
@@ -32,17 +34,17 @@ export default function Summary() {
           ml={"-20"}
           mr={"2"}
         >
-          <Heading size={"md"} mb={"gray.600"}>
+          <Heading size={"md"} mb={"4"} color={"gray.600"}>
             Balance is 100
           </Heading>
           <Flex
             justifyContent={"space-evenly"}
             alignItems={"center"}
             bg={"gray.50"}
-            w={"full"}
-            h={"100px"}
+            w="full"
+            h="100px"
             border={"1px solid"}
-            borderColor={"gary.100"}
+            borderColor={"gray.100"}
           >
             <Flex flexDirection={"column"}>
               <Heading color={"gray.700"}>$ 100</Heading>
@@ -53,14 +55,14 @@ export default function Summary() {
             justifyContent={"space-evenly"}
             alignItems={"center"}
             bg={"gray.50"}
-            w={"full"}
-            h={"100px"}
+            w="full"
+            h="100px"
             border={"1px solid"}
-            borderColor={"gary.100"}
+            borderColor={"gray.100"}
           >
             <Flex flexDirection={"column"}>
               <Heading color={"gray.700"}>$ 100</Heading>
-              <Text color={"gray.500"}>Total Expense</Text>
+              <Text color={"gray.600"}>Total Expense</Text>
             </Flex>
           </Flex>
         </Flex>
@@ -75,11 +77,12 @@ export default function Summary() {
           alignItems={"center"}
           justifyContent={"center"}
         >
-            <Heading>
-                Chart
-            </Heading>
+          <Heading>
+            <TransactionChartSummary expense={100} income={1000} />
+          </Heading>
         </Box>
       </Flex>
+      <TransactionForm onClose={onClose} isOpen={isOpen} />
     </Box>
   );
 }
