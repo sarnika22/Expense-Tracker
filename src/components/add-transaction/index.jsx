@@ -63,7 +63,7 @@ export default function TransactionForm({ onClose, isOpen }) {
                 checked={formData.type === "income"}
                 value="income"
                 colorScheme="blue"
-                name="Type"
+                name="type"
                 onChange={handleFormChange}
               >
                 Income
@@ -72,7 +72,7 @@ export default function TransactionForm({ onClose, isOpen }) {
                 checked={formData.type === "expense"}
                 value="expense"
                 colorScheme="red"
-                name="Type"
+                name="type"
                 onChange={handleFormChange}
               >
                 Expense
